@@ -1,0 +1,124 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Forms {% endblock %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+    <div class="pcoded-wrapper">
+
+        <div class="pcoded-content">
+            <div class="pcoded-inner-content">
+                <!-- [ breadcrumb ] start -->
+                <div class="page-header">
+                    <div class="page-block">
+                        <div class="row align-items-center">
+                            <div class="col-md-12">
+<!--                                <div class="page-header-title">-->
+<!--                                    <h5 class="m-b-10">传统相似度模型识别</h5>-->
+<!--                                </div>-->
+<!--                                <ul class="breadcrumb">-->
+<!--                                    <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a>-->
+<!--                                    </li>-->
+<!--                                    <li class="breadcrumb-item"><a href="javascript:">传统相似度模型识别</a></li>-->
+<!--                                </ul>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- [ breadcrumb ] end -->
+                <div class="main-body">
+                    <div class="page-wrapper">
+                        <!-- [ Main Content ] start -->
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <!-- Input group -->
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>传统相似度模型识别</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <!-- Form for GET request -->
+                                        <form id="searchForm" method="GET">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" id="keyInput1" name="code1" class="form-control"
+                                                               style="height: 300px; font-size: 16px;"
+                                                               placeholder="请输入攻击数据"
+                                                               aria-label="请输入攻击数据"
+                                                               aria-describedby="basic-addon2">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" id="keyInput2" name="code2" class="form-control"
+                                                               style="height: 300px; font-size: 16px;"
+                                                               placeholder="请输入攻击数据 2"
+                                                               aria-label="请输入攻击数据 2"
+                                                               aria-describedby="basic-addon2">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="input-group-append">
+                                                <button id="keySearch" class="btn btn-primary" type="submit">识别</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>计算结果</h5>
+                                        <span class="d-block m-t-5">展示相似度信息</span>
+                                    </div>
+                                    <div class="card-block table-border-style">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                <tr>
+                                                    <th>算法</th>
+                                                    <th>相似度</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                {% for onePlace in search_res %}
+                                                    <tr>
+                                                    {% for v in onePlace %}
+                                                        <td>{{ v }}</td>
+                                                    {% endfor %}
+                                                    </tr>
+                                                {% endfor %}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- [ Main Content ] end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- [ Main Content ] end -->
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+
+{% block javascripts %}
+    <script src="{{ ASSETS_ROOT }}/js/pages/form_elements.js"></script>
+{% endblock javascripts %}

@@ -1,0 +1,119 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Page Blank {% endblock %} 
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <!-- [ breadcrumb ] start -->
+
+                    <div class="page-header">
+                        <div class="page-block">
+                            <div class="row align-items-center">
+                                <div class="col-md-12">
+                                    <div class="page-header-title">
+                                        <h5 class="m-b-10">模型效果对比</h5>
+                                    </div>
+                                    <ul class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
+                                        <li class="breadcrumb-item"><a href="javascript:">模型效果对比</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- [ breadcrumb ] end -->
+                    <div class="main-body">
+                        <div class="page-wrapper">
+
+                            <!-- [ Main Content ] start -->
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>模型指标对比结果</h5>
+                                        </div>
+                                        <div class="card-block">
+                                            <img src="{{ ASSETS_ROOT }}/images/CUP99/1.模型指标对比结果.png" style="width: 80%">
+{#                                            <div style="height:300px;background-position: center center;background-size: auto;background-image: url({{ ASSETS_ROOT }}/images/CUP99/1.模型指标对比结果.png)"></div>#}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>不同模型指标对比(f1_score)</h5>
+                                        </div>
+                                        <div class="card-block">
+                                            <img src="{{ ASSETS_ROOT }}/images/CUP99/2.不同模型指标对比(f1_score).png" style="width: 80%">
+{#                                            <div style="height:300px;background-position: center center;background-size: auto;background-image: url({{ ASSETS_ROOT }}/images/CUP99/2.不同模型指标对比(f1_score).png)"></div>#}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>不同模型指标对比(accuracy)</h5>
+                                        </div>
+                                        <div class="card-block">
+                                            <img src="{{ ASSETS_ROOT }}/images/CUP99/3.不同模型指标对比(accuracy).png" style="width: 80%">
+{#                                            <div style="height:300px;background-position: center center;background-size: auto;background-image: url({{ ASSETS_ROOT }}/images/CUP99/3.不同模型指标对比(accuracy).png)"></div>#}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>MLP loss 变化曲线</h5>
+                                        </div>
+                                        <div class="card-block">
+                                            <img src="{{ ASSETS_ROOT }}/images/CUP99/4.mlp_loss.png" style="width: 80%">
+{#                                            <div style="height:300px;background-position: center center;background-size: auto;background-image: url({{ ASSETS_ROOT }}/images/CUP99/4.mlp_loss.png)"></div>#}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>MLP acc 变化曲线</h5>
+                                        </div>
+                                        <div class="card-block">
+                                            <img src="{{ ASSETS_ROOT }}/images/CUP99/5.mlp_acc.png" style="width: 80%">
+{#                                            <div style="height:300px;background-position: center center;background-size: auto;background-image: url({{ ASSETS_ROOT }}/images/CUP99/5.mlp_acc.png)"></div>#}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- [ Main Content ] end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
